@@ -18,3 +18,103 @@
   
     </body>
 </html>
+<h1>AI</h1>
+<p><!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Flex布局示例</title>
+        <style>
+            /* 定义Flex容器 */
+            .flex-container {
+                display: flex;            /* 启用Flex布局 */
+                justify-content: center;  /* 水平居中 */
+                align-items: center;      /* 垂直居中 */
+                height: 200px;            /* 容器高度 */
+                background-color: #f0f0f0; /* 容器背景颜色 */
+            }
+    
+            /* 定义Flex项目 */
+            .flex-item {
+                width: 100px;           /* 项目宽度 */
+                height: 100px;          /* 项目高度 */
+                background-color: #333; /* 项目背景颜色 */
+                margin: 10px;           /* 项目外边距 */
+                color: white;           /* 项目文本颜色 */
+                font-size: 24px;        /* 项目文本大小 */
+                display: flex;          /* 使项目内部也使用Flex布局 */
+                justify-content: center; /* 水平居中项目内的内容 */
+                align-items: center;     /* 垂直居中项目内的内容 */
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Flex容器 -->
+        <div class="flex-container">
+            <!-- Flex项目 -->
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+    </body>
+    </html>
+    </p><!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Transform示例</title>
+        <style>
+            .box {
+                width: 100px;
+                height: 100px;
+                background-color: teal;
+                margin: 50px;
+                transition: transform 0.5s; /* 平滑过渡效果 */
+            }
+    
+            .box:hover {
+                transform: rotate(45deg); /* 鼠标悬停时旋转45度 */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+    </body>
+    </html>
+    <p><!DOCTYPE html>
+        <html>
+        <head>
+          <style>
+            .container {
+              display: flex;
+              justify-content: center;
+              background-color: lightblue;
+              padding: 20px;
+            }
+            .item {
+              width: 100px;
+              height: 100px;
+              background-color: red;
+              margin: 10px;
+              animation: rotate 5s infinite linear;
+            }
+            @keyframes rotate {
+              0% {
+                transform: rotate(0deg);
+              }
+              100% {
+                transform: rotate(360deg);
+              }
+            }
+          </style>
+        </head>
+        <body>
+          <div class="container">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+          </div>
+        </body>
+        </html>
