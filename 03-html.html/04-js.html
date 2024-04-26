@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>// 定义一个函数，用于显示欢迎信息
+function displayWelcomeMessage() {
+  console.log("欢迎使用简单计算器！");
+}
+
+// 定义一个函数，用于获取用户输入的操作数
+function getNumberInput(promptMessage) {
+  let input = parseFloat(prompt(promptMessage));
+  while (isNaN(input)) {
+    input = parseFloat(prompt("输入无效，请输入一个数字："));
+  }
+  return input;
+}
+
+// 定义一个函数，用于执行加法运算
+function add(a, b) {
+  return a + b;
+}
+
+// 定义一个函数，用于执行减法运算
+function subtract(a, b) {
+  return a - b;
+}
+
+// 定义一个函数，用于执行乘法运算
+function multiply(a, b) {
+  return a * b;
+}
+
+// 定义一个函数，用于执行除法运算
+function divide(a, b) {
+  if (b === 0) {
+    alert("除数不能为0！");
+    return null;
+  }
+  return a / b;
+}
+
+// 主函数，用于控制整个程序的流程
+function main() {
+  displayWelcomeMessage();
+
+  let number1 = getNumberInput("请输入第一个操作数：");
+  let number2 = getNumberInput("请输入第二个操作数：");
+  let operation = prompt("请输入要执行的操作（加、减、乘、除）：");
+
+  let result;
+  switch (operation) {
+    case "加":
+      result = add(number1, number2);
+      break;
+    case "减":
+      result = subtract(number1, number2);
+      break;
+    case "乘":
+      result = multiply(number1, number2);
+      break;
+    case "除":
+      result = divide(number1, number2);
+      break;
+    default:
+      alert("未知的操作命令！");
+      return;
+  }
+
+  if (result !== null) {
+    console.log(`计算结果是：${result}`);
+  }
+}
+
+// 调用主函数以启动程序
+main();
+
+</html>
+<body>
+    // 字符串转换为布尔值
+let str = "hello";
+let boolFromString = Boolean(str); // 结果为 true，因为非空字符串转换为true
+
+// 数字转换为布尔值
+let num = 25;
+let boolFromNumber = Boolean(num); // 结果为 true，因为非零数字转换为true
+
+// 空字符串转换为布尔值
+let emptyStr = "";
+let boolFromEmptyString = Boolean(emptyStr); // 结果为 false，因为空字符串转换为false
+
+// 零转换为布尔值
+let zero = 0;
+let boolFromZero = Boolean(zero); // 结果为 false，因为0转换为false
+
+// null转换为布尔值
+let nil = null;
+let boolFromNull = Boolean(nil); // 结果为 false，因为null转换为false
+
+// undefined转换为布尔值
+let undef;
+let boolFromUndefined = Boolean(undef); // 结果为 false，因为undefined转换为false
+
+// 对象（包括数组、函数等）转换为布尔值
+let obj = { key: "value" };
+let boolFromObject = Boolean(obj); // 结果为 true，因为对象（非空）转换为true
+
+console.log(boolFromString); // 输出 true
+console.log(boolFromNumber); // 输出 true
+console.log(boolFromEmptyString); // 输出 false
+console.log(boolFromZero); // 输出 false
+console.log(boolFromNull); // 输出 false
+console.log(boolFromUndefined); // 输出 false
+console.log(boolFromObject); // 输出 true
+
+</body>
+<body>
+    基础运算符中的加号运算
+    // 数值加法
+    let a = 5;
+    let b = 3;
+    let sum = a + b; // 结果为 8
+    
+    // 字符串连接
+    let firstName = "张";
+    let lastName = "三";
+    let fullName = firstName + lastName; // 结果为 "张三"
+    
+    // 混合数值和字符串
+    let message = "Hello, " + "world!"; // 结果为 "Hello, world!"
+    let mixed = "The answer is " + 42; // 结果为 "The answer is 42"
+    
+    // 注意：如果加号两边有一个是字符串，那么另一个也会被转换为字符串
+    let num = 5;
+    let string = "10";
+    let result = num + string; // 结果为 "510"，因为数值5被转换为字符串与另一个字符串连接
+    
+    console.log(sum); // 输出 8
+    console.log(fullName); // 输出 "张三"
+    console.log(message); // 输出 "Hello, world!"
+    console.log(mixed); // 输出 "The answer is 42"
+    console.log(result); // 输出 "510"
+    
+</body>// 定义一个数组
+let fruits = ['苹果', '香蕉', '橙子', '梨', '草莓'];
+
+// 使用for循环遍历数组
+for (let i = 0; i < fruits.length; i++) {
+  // 在控制台打印数组的当前元素
+  console.log(fruits[i]);
+}

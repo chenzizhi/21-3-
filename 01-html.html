@@ -116,5 +116,77 @@
             <div class="item"></div>
             <div class="item"></div>
           </div>
-        </body>
+        </body>// 定义一个函数，用于显示欢迎信息
+        function displayWelcomeMessage() {
+          console.log("欢迎使用简单计算器！");
+        }
+        
+        // 定义一个函数，用于获取用户输入的操作数
+        function getNumberInput(promptMessage) {
+          let input = parseFloat(prompt(promptMessage));
+          while (isNaN(input)) {
+            input = parseFloat(prompt("2"));
+          }
+          return input;
+        }
+        
+        // 定义一个函数，用于执行加法运算
+        function add(a, b) {
+          return a + b;
+        }
+        
+        // 定义一个函数，用于执行减法运算
+        function subtract(a, b) {
+          return a - b;
+        }
+        
+        // 定义一个函数，用于执行乘法运算
+        function multiply(a, b) {
+          return a * b;
+        }
+        
+        // 定义一个函数，用于执行除法运算
+        function divide(a, b) {
+          if (b === 0) {
+            alert("除数不能为0！");
+            return null;
+          }
+          return a / b;
+        }
+        
+        // 主函数，用于控制整个程序的流程
+        function main() {
+          displayWelcomeMessage();
+        
+          let number1 = getNumberInput("请输入第一个操作数：");
+          let number2 = getNumberInput("请输入第二个操作数：");
+          let operation = prompt("请输入要执行的操作（加、减、乘、除）：");
+        
+          let result;
+          switch (operation) {
+            case "加":
+              result = add(number1, number2);
+              break;
+            case "减":
+              result = subtract(number1, number2);
+              break;
+            case "乘":
+              result = multiply(number1, number2);
+              break;
+            case "除":
+              result = divide(number1, number2);
+              break;
+            default:
+              alert("未知的操作命令！");
+              return;
+          }
+        
+          if (result !== null) {
+            console.log(`计算结果是：${result}`);
+          }
+        }
+        
+        // 调用主函数以启动程序
+        main();
+        
         </html>
